@@ -33,10 +33,11 @@ def login_page():
     Returns the HTML for the login page.
     """
 
+# Additional code changes by Austin: changed post action to hello.py as per TA instructions
     return _wrapper(r"""
     <h1> Welcome! </h1>
 
-    <form method="POST" action="login.py">
+    <form method="POST" action="hello.py">
         <label> <span>Username:</span> <input autofocus type="text" name="username"></label> <br>
         <label> <span>Password:</span> <input type="password" name="password"></label>
 
@@ -63,6 +64,7 @@ def secret_page(username=None, password=None):
                password=escape(password)))
 
 
+# Additional code changes by Austin: changed link to hello.py as per TA instructions
 def after_login_incorrect():
     """
     Returns the HTML for the page when the login credentials were typed
@@ -73,7 +75,7 @@ def after_login_incorrect():
 
     <p> Incorrect username or password (hint: <span class="spoilers"> Check
         <code>secret.py</code>!</span>)
-    <p> <a href="login.py"> Try again. </a>
+    <p> <a href="hello.py"> Try again. </a>
     """)
 
 
